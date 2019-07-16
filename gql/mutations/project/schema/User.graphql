@@ -1,0 +1,32 @@
+type Profile {
+    id: Int
+    name: String!
+}
+
+enum userStats {
+    ACTIVE
+    INACTIVE
+    BLOCKED
+}
+
+type User {
+    id: ID
+    name: String!
+    email: String!
+    age: Int
+    salary: Float
+    vip: Boolean
+    profile: Profile
+    stats: userStats
+}
+
+input UserInput {
+    name: String
+    email: String
+    age: Int
+}
+
+input UserFilter {
+    id: Int
+    email: String
+}
